@@ -1,0 +1,66 @@
+base_url = "https://blog.maesoser.me"
+generate_feed = true
+title = "maesoser"
+description = "Just a small blog"
+compile_sass = true
+build_search_index = true
+
+taxonomies = [{ name = "tags" }]
+
+default_language = "en"
+
+[markdown]
+highlight_code = true
+highlight_theme = "OneHalfLight"
+
+[extra]
+
+# control dark mode: auto | dark | toggle
+mode = "toggle"
+useCDN = true
+favicon = "/icon/favicon.png"
+copyright = "maesoser"
+
+[extra.translations]
+languages = [{name = "en", url = "/"}]
+
+[[extra.translations.en]]
+show_more = "Read more ⟶"
+previous_page = "← Previous"
+next_page = "Next →"
+posted_on = "on "
+posted_by = "Published by"
+read_time = "minute read"
+all_tags = "All tags"
+menus = [
+    { name = "Home", url = "/", weight = 2 },
+    { name = "All posts", url = "/posts", weight = 2 },
+    { name = "About", url = "/about", weight = 3 },
+    { name = "Tags", url = "/tags", weight = 4 },
+]
+
+# config social icon info in the footer
+[[extra.social]]
+icon = "github"
+name = "GitHub"
+url = "https://github.com/maesoser"
+
+[[extra.social]]
+icon = "twitter"
+name = "Twitter"
+url = "https://twitter.com/maesoser"
+
+[[extra.social]]
+icon = "instagram"
+name = "Instragram"
+url = "https://www.instagram.com/maesoser"
+
+[[extra.social]]
+icon = "linkedin"
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/maesoser/"
+
+[[extra.social]]
+icon = "rss"
+name = "RSS"
+url = "https://blog.maesoser.me/atom.xml"
