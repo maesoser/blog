@@ -1,6 +1,6 @@
 +++
 title = "How to add a prometheus node exporter to a lightweight openwrt router"
-date = "2022-28-12"
+date = "2022-12-28"
 description = "Adding a prometheus node exporter to a lightweight openwrt installation by making use of uhttpd cgi-bin folder and lua."
 
 [taxonomies]
