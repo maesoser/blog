@@ -1,7 +1,7 @@
 +++
 title = "How to add a prometheus node exporter to a lightweight openwrt router"
 date = "2022-12-28"
-description = "Adding a prometheus node exporter to a lightweight openwrt installation by making use of uhttpd cgi-bin folder and lua."
+description = "Or what to do when `opkg update && opkg install prometheus-node-exporter-lua` is not an option."
 
 [taxonomies]
 tags = ["homelab"]
@@ -12,7 +12,7 @@ author = { name = "Maesoser", social= "https://github.com/maesoser" }
 
 I find exciting to work in constrained environments. Having to work with the tools that I have in hand forces me to think creatively and sometimes to solve things by writing small pieces of software, which I find really rewarding. This was one of these situations. By chance, I had to deal with a TL-WR841N flashed with Openwrt. This is a device with pretty big hardware limitations. Having only 4MB of ROM and 32MB of RAM even Openwrt discourages you from using new OS versions as it is impossible to install and run new packages and, even at the bare minimum, you could experience problems related to Out-Of-Memory situations.
 
-In this case, I wanted to find a way to extract some basic information like CPU, memory consumption and network interface statistics from the router. But I wasn't able to install the [official openwrt node exporter package](https://openwrt.org/packages/pkgdata/prometheus-node-exporter-lua) and its dependencies like lua-socket given the aforementioned device limitations.
+In this case, I wanted to find a way to extract some basic information like CPU, memory consumption and network interface statistics from the router. But I wasn't able to install [snmpd](https://openwrt.org/packages/pkgdata/snmpd) or the [official openwrt node exporter package](https://openwrt.org/packages/pkgdata/prometheus-node-exporter-lua) and its dependencies like lua-socket given the aforementioned device limitations.
 
 I found a [minimalistic version of the lua exporter](https://gist.github.com/lyda/ba33d229a1c01fc5e445) from [@lyda](https://github.com/lyda) and after some small changes I was able to remove the code related to the socket module that allowed the script to act as a small server and just print the output in the console:
 
