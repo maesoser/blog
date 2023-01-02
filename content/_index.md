@@ -1,10 +1,10 @@
 +++
-paginate_by = 3
+paginate_by = 6
 sort_by = "date"
 +++
 
 [taxonomies]
-tags = ["Ceybersecurity", "Networks", "Homelab"]
+tags = ["Cybersecurity", "Networks", "Homelab"]
 
 [extra]
 author = { name = "maesoser", social= "https://github.com/maesoser" }
