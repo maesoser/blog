@@ -34,9 +34,10 @@ read_time = "minute read"
 all_tags = "All tags"
 menus = [
     { name = "Home", url = "/", weight = 2 },
-    { name = "All posts", url = "/posts", weight = 2 },
+#    { name = "All posts", url = "/posts", weight = 2 },
     { name = "About", url = "/about", weight = 3 },
-    { name = "Tags", url = "/tags", weight = 4 },
+    { name = "Reading", url = "/reading", weight = 4 },
+    { name = "Tags", url = "/tags", weight = 5 },
 ]
 
 # config social icon info in the footer

@@ -1,0 +1,14 @@
+<li class="cite">
+    <a href="{{link}}", target="_blank">{{title}}</a> <span> // {{type}}</span>
+    <br>
+    <span>{% if date %}Read on {{date | date(format="%B, %Y") }}{% else %}Still reading it{% endif %}</span>
+    <span>| {% if author %}{{author}}{% else %}Unknown author{% endif %} </span>
+    {% if publisher %}<span>| Published by {{publisher}}</span>{% endif %}
+    <br>
+    <div class="tags" style="font-style: italic;">
+    {% for tag in tags %}
+        <a class="tag" href="?tag={{tag}}">{{tag}}</a>
+    {% endfor %}
+    </div>
+</li>
+<br>
