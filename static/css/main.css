@@ -63,7 +63,7 @@ blockquote {
 }
 
 a {
-    border-bottom: 3px solid var(--maincolor);
+    border-bottom: 2px solid var(--maincolor);
     color: inherit;
     text-decoration: none;
 }
@@ -270,7 +270,7 @@ article .title {
 }
 
 .callout a {
-    border-bottom: 3px solid #fff;
+    border-bottom: 2px solid #fff;
 }
 
 .callout a:hover {
@@ -288,7 +288,7 @@ article .title {
 }
 
 .tags a {
-    border-bottom: 3px solid var(--maincolor);
+    border-bottom: 2px solid var(--maincolor);
 }
 
 .tags a:hover {
