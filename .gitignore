@@ -4,6 +4,7 @@ test_site/public
 test_site_i18n/public
 docs/public
 docs/out
+public/
 
 small-blog
 medium-blog
