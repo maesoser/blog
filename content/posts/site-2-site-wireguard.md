@@ -4,10 +4,10 @@ date = "2023-01-01"
 description = "How to create a site to site tunnel between two VPN gateways"
 
 [taxonomies]
-tags = ["networks", "homelab"]
+tags = ["networks", "homelab", "openwrt"]
 
 [extra]
-author = { name = "Maesoser", social= "https://github.com/maesoser" }
+cauthor = { name = "Maesoser", social= "https://github.com/maesoser" }
 +++
 
 My life is balanced between London, the city in which I work and live, and Madrid, where my family and an important part of my friends live. For that reason, my homelab is also split between these two cities and some of the services I am running in it need secure and private connectivity between them. I've been using ad-hoc solutions like SSH tunnels thanks to [mole](https://github.com/davrodpin/mole) or writing specific pieces of software like promrelay[^1] but in the end it was too difficult to keep this configuration up and running smoothly.

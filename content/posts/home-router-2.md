@@ -1,7 +1,7 @@
 +++
 title = "Installing docker on my x86 router/firewall"
 date = "2020-04-25"
-description = "In my prvious post I explained the steps I followed in order to add a virtualized firewall on top of a x86 based router and filter the traffic from the host itself through that firewall.  I had to do that because I wanted to install additional services on my router besides the firewall."
+description = "In my previous post I explained the steps I followed in order to add a virtualized firewall on top of a x86 based router and filter the traffic from the host itself through that firewall.  I had to do that because I wanted to install additional services on my router besides the firewall."
 
 [taxonomies]
 tags = ["networks", "homelab"]

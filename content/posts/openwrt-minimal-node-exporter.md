@@ -1,18 +1,18 @@
 +++
-title = "How to add a prometheus node exporter to a lightweight openwrt router"
+title = "How to add a prometheus node exporter to a lightweight OpenWrt router"
 date = "2022-12-28"
-description = "Or what to do when `opkg update && opkg install prometheus-node-exporter-lua` is not an option."
+description = "Or what to do when `opkg update && opkg install prometheus-node-exporter-lua` is not even an option."
 
 [taxonomies]
-tags = ["homelab"]
+tags = ["homelab", "openwrt"]
 
 [extra]
 author = { name = "Maesoser", social= "https://github.com/maesoser" }
 +++
 
-I find exciting to work in constrained environments. Having to work with the tools that I have in hand forces me to think creatively and sometimes to solve things by writing small pieces of software, which I find really rewarding. This was one of these situations. By chance, I had to deal with a TL-WR841N flashed with Openwrt. This is a device with pretty big hardware limitations. Having only 4MB of ROM and 32MB of RAM even Openwrt discourages you from using new OS versions as it is impossible to install and run new packages and, even at the bare minimum, you could experience problems related to Out-Of-Memory situations.
+I find exciting to work in constrained environments. Having to work with the tools that I have in hand forces me to think creatively and sometimes to solve things by writing small pieces of software, which I find really rewarding. This was one of these situations. By chance, I had to deal with a TL-WR841N flashed with OpenWrt. This is a device with pretty big hardware limitations. Having only 4MB of ROM and 32MB of RAM even OpenWrt discourages you from using new OS versions as it is impossible to install and run new packages and, even at the bare minimum, you could experience problems related to Out-Of-Memory situations.
 
-In this case, I wanted to find a way to extract some basic information like CPU, memory consumption and network interface statistics from the router. But I wasn't able to install [snmpd](https://openwrt.org/packages/pkgdata/snmpd) or the [official openwrt node exporter package](https://openwrt.org/packages/pkgdata/prometheus-node-exporter-lua) and its dependencies like lua-socket given the aforementioned device limitations.
+In this case, I wanted to find a way to extract some basic information like CPU, memory consumption and network interface statistics from the router. But I wasn't able to install [snmpd](https://openwrt.org/packages/pkgdata/snmpd) or the [official OpenWrt node exporter package](https://openwrt.org/packages/pkgdata/prometheus-node-exporter-lua) and its dependencies like lua-socket given the aforementioned device limitations.
 
 I found a [minimalistic version of the lua exporter](https://gist.github.com/lyda/ba33d229a1c01fc5e445) from [@lyda](https://github.com/lyda) and after some small changes I was able to remove the code related to the socket module that allowed the script to act as a small server and just print the output in the console:
 
@@ -159,8 +159,8 @@ print_metric(string.format('domainname="(none)",machine="%s",nodename="%s",' ..
                            uname[6], uname[7], uname[8], uname[9], uname[10]), 1)
 ```
 
-However, I still had a pretty important challenge ahead: how to get that information. Maybe by login in through ssh, running that script and capturing the output? That was quite a complex approach. The ideal solution would be to serve that through http, just as the [Prometheus documentation instructs us to do](https://prometheus.io/docs/instrumenting/writing_exporters/) but I wasn't able to install the socket module. What else could I use as http server on such a stripped down Openwrt version? Well, it _did have_ a full http server, [uhttpd](https://openwrt.org/docs/guide-user/services/webserver/http.uhttpd), the one that is powering Luci, the openwrt web interface. And it turns out that this server has a [Common Gateway Interface (CGI)](https://en.wikipedia.org/wiki/Common_Gateway_Interface) that is one of the parts responsible of serving the Openwrt web interface.
+However, I still had a pretty important challenge ahead: how to get that information. Maybe by login in through ssh, running that script and capturing the output? That was quite a complex approach. The ideal solution would be to serve that through http, just as the [Prometheus documentation instructs us to do](https://prometheus.io/docs/instrumenting/writing_exporters/) but I wasn't able to install the socket module. What else could I use as http server on such a stripped down OpenWrt version? Well, it _did have_ a full http server, [uhttpd](https://openwrt.org/docs/guide-user/services/webserver/http.uhttpd), the one that is powering LuCi, OpenWrt's web interface. And it turns out that this server has a [Common Gateway Interface (CGI)](https://en.wikipedia.org/wiki/Common_Gateway_Interface) that is one of the parts responsible of serving the OpenWrt web interface.
 
 So what I did was to copy my small script to `/www/cgi-bin/metrics` and give it execute permissions and after doing that, just by accessing `http://router.local/cgi-bin/metrics` I was able to remotely run the script and expose the metrics.
 
-In the end, I was able to find a solution that worked for this specific situation and was able to extract and expose the metrics I needed from the router. While working in constrained environments can be challenging, it can also be extremely rewarding when you find a nice and simple solution like I did! The `/cgi-bin/` approach is also interesting to integrate third party modules into an Openwrt router. I hope to have the opportunity to explore this option further in the coming months.
+In the end, I was able to find a solution that worked for this specific situation and was able to extract and expose the metrics I needed from the router. While working in constrained environments can be challenging, it can also be extremely rewarding when you find a nice and simple solution like I did! The `/cgi-bin/` approach is also interesting to integrate third party modules into an OpenWrt router. I hope to have the opportunity to explore this option further in the coming months.

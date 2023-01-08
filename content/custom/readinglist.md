@@ -23,7 +23,7 @@ Interested in what I've been reading this year? This is an incomplete list of th
     type="book" ,
     link="https://www.goodreads.com/book/show/41104077-invisible-women", 
     publisher="Penguin Random House" 
-    tags=["nonfiction", "feminism", "science", "politics", "sociology", "english"] 
+    tags=["nonfiction", "feminism", "science", "politics", "sociology"] 
 ) }}
 
 {{ cite(
@@ -33,8 +33,25 @@ Interested in what I've been reading this year? This is an incomplete list of th
     type="book" ,
     link="https://www.casadellibro.com/libro-fundacion-e-imperio/9788498003239/1167660", 
     publisher="La Factoría de Ideas" 
-    tags=["science fiction", "fiction", "english"] 
+    tags=["science fiction", "fiction", "spanish"] 
 ) }}
 
 ## Articles
 
+{{ cite(
+    title="The Web Is Fucked", 
+    author="Kev Quirk", 
+    date="2023-01-03"
+    type="web article" ,
+    link="https://thewebisfucked.com/", 
+    tags=["internet", "web", "opinion"] 
+) }}
+
+{{ cite(
+    title="¿Te gusta lo que ves? (Documental)", 
+    author="Ted Chiang", 
+    date="2023-01-03"
+    type="web article" ,
+    link="https://ciervoblanco.club/te-gusta-lo-que-ves-documental-de-ted-chiang/", 
+    tags=["science fiction", "short story"] 
+) }}
