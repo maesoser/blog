@@ -6,8 +6,6 @@ description = "How to create a site to site tunnel between two VPN gateways"
 [taxonomies]
 tags = ["networks", "homelab", "openwrt"]
 
-[extra]
-cauthor = { name = "Maesoser", social= "https://github.com/maesoser" }
 +++
 
 My life is balanced between London, the city in which I work and live, and Madrid, where my family and an important part of my friends live. For that reason, my homelab is also split between these two cities and some of the services I am running in it need secure and private connectivity between them. I've been using ad-hoc solutions like SSH tunnels thanks to [mole](https://github.com/davrodpin/mole) or writing specific pieces of software like promrelay[^1] but in the end it was too difficult to keep this configuration up and running smoothly.
@@ -16,7 +14,7 @@ I decided to standardize it a little bit more and configure a site to site VPN. 
 
 I didn't want to open any additional ports or create new interfaces. The gateways already in place should allow me not only to connect to the Internet from each country using my laptop or my phone, but they should also be connected to each other and give me seamless connectivity.
 
-![infra](/images/site-to-site-wireguard/infra.png)
+![infra](/images/site-to-site-wireguard/infra.jpeg)
 
 There are also some tiny details that add a little bit of complexity to the mix like that each gateway uses different software (MicroTik in London and OpenWrt in Madrid) or that the gateway and the router are different boxes in Madrid.
 
@@ -105,7 +103,7 @@ config wireguard_wg0
 
 In the London router we will do something extremely similar but using the MicroTik's dashboard, specifically in **Wireguard > Peers** section:
 
-![MicroTik Wireguard peer config](/images/site-to-site-wireguard/microtik-2.png)
+![MicroTik Wireguard peer config](/images/site-to-site-wireguard/microtik-2.jpeg)
 
 ### 4. Routing configuration
 
@@ -132,7 +130,7 @@ config route
 
 This last step is not needed in the MicroTik located in London. There we will only need to configure a single static route to send traffic through the WireGuard interface in **IP > Routes**:
 
-![MicroTik Wireguard routes config](/images/site-to-site-wireguard/microtik-3.png)
+![MicroTik Wireguard routes config](/images/site-to-site-wireguard/microtik-3.jpeg)
 
 After performing this last step we should already have connectivity between both network locations. We could test that by simply using the ping command:
 

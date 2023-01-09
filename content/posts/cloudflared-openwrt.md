@@ -6,8 +6,6 @@ description = "Compiling Cloudflare Tunnel to be used in devices with more exoti
 [taxonomies]
 tags = [ "cloudflare", "openwrt"]
 
-[extra]
-author = { name = "Maesoser", social= "https://github.com/maesoser" }
 +++
 
 My parents are right now using a cute but powerful [GL-iNet router](https://www.gl-inet.com/), so I decided to install Cloudflared on it to be able to remotely manage its configuration without the need to use a Dynamic DNS (DDNS) service and some port forwarding magic that could stop working at any time or if my parents change to an ISP that uses CGNAT.
@@ -140,11 +138,11 @@ logread -f
 
 And that's all folks! Now I have access to the router without having to create error prone port forwardings, without having to open ports and no matter which IP address is the router using.
 
-![Openwrt dashboard](/images/cloudflared-openwrt/openwrt-dashboard.png)
+![Openwrt dashboard](/images/cloudflared-openwrt/openwrt-dashboard.jpeg)
 
 I must say that resource consumption is not excellent, given how constrained a router is, but it is far from terrible. Here is a screenshot of htop obtained by using [the web rendered ssh terminal that Cloudflare provides](https://blog.cloudflare.com/browser-ssh-terminal-with-auditing/)
 
-![Openwrt SSH](/images/cloudflared-openwrt/openwrt-ssh.png)
+![Openwrt SSH](/images/cloudflared-openwrt/openwrt-ssh.jpeg)
 
 ## References
 

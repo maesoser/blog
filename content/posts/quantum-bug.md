@@ -6,8 +6,6 @@ description = "¿Os acordáis del efecto 2000? Ese bug apocalíptico que según 
 [taxonomies]
 tags = ["networks", "engineering"]
 
-[extra]
-author = { name = "Maesoser", social= "https://github.com/maesoser" }
 +++
 
 ¿Os acordáis del efecto 2000? Ese bug apocalíptico que según la tele estuvo a punto de poner en jaque nuestros sistemas informáticos la noche del 31 de diciembre de 1999.

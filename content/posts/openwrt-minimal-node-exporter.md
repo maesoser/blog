@@ -6,8 +6,6 @@ description = "Or what to do when `opkg update && opkg install prometheus-node-e
 [taxonomies]
 tags = ["homelab", "openwrt"]
 
-[extra]
-author = { name = "Maesoser", social= "https://github.com/maesoser" }
 +++
 
 I find exciting to work in constrained environments. Having to work with the tools that I have in hand forces me to think creatively and sometimes to solve things by writing small pieces of software, which I find really rewarding. This was one of these situations. By chance, I had to deal with a TL-WR841N flashed with OpenWrt. This is a device with pretty big hardware limitations. Having only 4MB of ROM and 32MB of RAM even OpenWrt discourages you from using new OS versions as it is impossible to install and run new packages and, even at the bare minimum, you could experience problems related to Out-Of-Memory situations.

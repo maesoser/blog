@@ -6,8 +6,6 @@ description = "No resulta nuevo para nadie que de un tiempo a esta parte multitu
 [taxonomies]
 tags = ["networks"]
 
-[extra]
-author = { name = "Maesoser", social= "https://github.com/maesoser" }
 +++
 
 No resulta nuevo para nadie que de un tiempo a esta parte multitud de gobiernos de dudosa calidad democrática han incrementado sus esfuerzos para monitorizar y controlar esa gran herramienta de difusión de ideas que es Internet. En la gran mayoría de veces, estos intentos se han basado en formas creativas de "doblar" los protocolos existentes con el fin de limitar la difusión de opiniones contrarias a la ideología dominante en esos países. Sin embargo, el 2020 nos ha sorprendido con Huawei proponiendo[^4] un nuevo estándar que reemplazaría el antiguo protocolo IP por otro protocolo. 

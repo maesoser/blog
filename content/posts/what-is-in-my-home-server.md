@@ -7,8 +7,6 @@ draft = true
 [taxonomies]
 tags = ["homelab", "engineering"]
 
-[extra]
-author = { name = "Maesoser", social= "https://github.com/maesoser" }
 +++
 
 - Jellyfin
