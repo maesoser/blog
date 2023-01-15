@@ -55,3 +55,14 @@ Interested in what I've been reading this year? This is an incomplete list of th
     link="https://ciervoblanco.club/te-gusta-lo-que-ves-documental-de-ted-chiang/", 
     tags=["science fiction", "short story"] 
 ) }}
+
+
+{{ cite(
+    title="Privacy of Personal Information", 
+    author="Sutapa Mondal,Mangesh S. Gharote,& Sachin P. Lodha", 
+    date="2023-01-15"
+    type="web article" ,
+    link="https://queue.acm.org/detail.cfm?id=3546934", 
+    tags=["privacy", "internet", "theory"] 
+) }}
+
