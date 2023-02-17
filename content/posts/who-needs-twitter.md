@@ -23,11 +23,17 @@ Hosting is not a problem. Right now, there are plenty of options for hosting a b
 
 In my case, for obvious reasons, I'm using Cloudflare Pages. The fact that Github now allows you to modify files from the browser makes things super easy for me because that means that once the integration between [Github and Cloudflare Pages](https://developers.cloudflare.com/pages/framework-guides/deploy-a-zola-site/) is done I can just edit or create pages in Github and my blog will be automatically compiled and updated in Cloudflare.
 
+## References
 
 [^1]: [My awakening moment about how smartphones fragment our attention span](https://idratherbewriting.com/blog/awakening-moment-to-how-smartphones-fragment-our-attention/)
+
 [^2]: [Status of Mind report](https://www.rsph.org.uk/our-work/campaigns/status-of-mind.html)
+
 [^3]: [Instagram Is Doing Grave Harm to Our Generation. We Need Help to Stop It](https://time.com/6100182/instagram-generation-z-mental-health/)
+
 [^4]: [Facebook’s internal research on the mental health effects of Instagram](https://www.theverge.com/2021/9/29/22701445/facebook-instagram-mental-health-research-pdfs-documents)
+
 [^5]: [Exposure to Opposing Views can Increase Political Polarization: Evidence from a Large-Scale Field Experiment on Social Media](https://osf.io/preprints/socarxiv/4ygux/)
+
 [^6]: [100 Days To Offload: Can you publish 100 posts on your blog in a year?](https://100daystooffload.com/)
 
