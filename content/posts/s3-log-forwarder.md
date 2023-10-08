@@ -23,7 +23,7 @@ For that reason, it is important to have a centralized logging system that colle
 
 Given these requirements I decided to create a small syslog-to-s3 daemon. The daemon will sit in my spine network devices as a syslog service, it will receive syslog messages from localhost or other devices in the network, turn the syslog format into JSON format and if the number of messages reaches a certain threshold or the messages hasn't been sent for a certain amount of time, it will gzip the messages and sent them to an S3 compatible location like an S3 bucket, R2 or a remote instance with Minio installed for instance.
 
-![diagram](/images/home-router-2/diagram.png)
+![diagram](/images/s3-log-forwarder/diagram.png)
 
 I built the daemon using Golang because it allows me to implement my logic in a few lines of code, and it is easy to cross-compile the code to the CPU architectures needed to be deployed in my routers like ARM, ARM64 or even the more exotic MIPS. This is an example of the message format that is being sent by my daemon:
 
