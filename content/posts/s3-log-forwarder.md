@@ -1,5 +1,5 @@
 +++
-title = "Sending your networks logs to S3"
+title = "Sending your network logs to S3 straight from your router"
 date = "2023-09-06"
 description = "Taking advantage of the extensibility options of current routers to enhance the monitoring capabilties of my network"
 draft = false
@@ -17,9 +17,9 @@ As a network enthusiast (and an immigrant), my current network infrastructure sp
 
 For that reason, it is important to have a centralized logging system that collects logs from all the network devices in order to streamline the resolution of network disruptions. Given the specific characteristics of my network, the logging solution should fulfil some specific requirements:
 
-- It should be out-of-bound, meaning that it should not rely on the WireGuard tunnels that compose my network. I'd like to receive logs in the event that the WireGuard tunnels are down, but the connectivity to the Internet remains intact.
-- It should be encrypted as we don't fully control the amount of sensitive information that could be contained in the logs
-- It should provide the means for receiving logs from "dumb devices" that do not allow the installation of additional software
+- **It should be out-of-bound**, meaning that it should not rely on the WireGuard tunnels that compose my network. I'd like to receive logs in the event that the WireGuard tunnels are down, but the connectivity to the Internet remains intact.
+- **It should be encrypted** as we don't fully control the amount of sensitive information that could be contained in the logs
+- **It should provide the means for receiving logs from "dumb devices"** that do not allow the installation of additional software
 
 Given these requirements I decided to create a small syslog-to-s3 daemon. The daemon will sit in my spine network devices as a syslog service, it will receive syslog messages from localhost or other devices in the network, turn the syslog format into JSON format and if the number of messages reaches a certain threshold or the messages hasn't been sent for a certain amount of time, it will gzip the messages and sent them to an S3 compatible location like an S3 bucket, R2 or a remote instance with Minio installed for instance.
 
@@ -35,7 +35,7 @@ I built the daemon using Golang because it allows me to implement my logic in a 
     "priority":85,
     "severity":5,
     "tag":"dropbear",
-    "timestamp":"2023-10-04T00:24:15Z"
+    "timestamp":"2023-10-04T00:24:15Z",
     "content":"Pubkey auth succeeded for 'user1' with key sha1!! 00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00 from 192.168.4.226:60334",
 }
 ```

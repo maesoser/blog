@@ -16,7 +16,7 @@ El conjunto de Internet y no sólo los organismos reguladores debemos mostrarnos
 
 [^2]: [RIPE Answer](https://www.ripe.net/participate/internet-governance/multi-stakeholder-engagement/ripe-ncc_tsag_new-ip.pdf)
 [^1]: [IETF Response](https://datatracker.ietf.org/liaison/1677/)
-[^3]: [IDC's Worldwide Quarterly Ethernet Switch and Router Trackers](https://www.idc.com/getdoc.jsp?containerId=prUS46123820)
+[^3]: [FCC Will Deny Funds to Carriers, ISPs That Use Huawei, ZTE Gear](https://www.pcmag.com/news/fcc-will-deny-funds-to-carriers-isps-that-use-huawei-zte-gear)
 [^4]: [A Brief Introduction about New IP Research Initiative](https://www.huawei.com/en/industry-insights/innovation/new-ip)
 
 

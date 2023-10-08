@@ -8,7 +8,7 @@ tags = ["networks", "homelab"]
 
 +++
 
-In my [previous post](https://blog.souvlaki.cf/posts/250420_homerouter/) I explained the steps I followed in order to add a virtualized firewall on top of a x86 based router and filter the traffic from the host itself through that firewall.  I had to do that because I wanted to install additional services on my router besides the firewall.
+In my [previous post](https://blog.maesoser.me/posts/home-router-1/) I explained the steps I followed in order to add a virtualized firewall on top of a x86 based router and filter the traffic from the host itself through that firewall.  I had to do that because I wanted to install additional services on my router besides the firewall.
 
 One of the easiest ways to deploy services on a linux machine is by simply spinning up docker containers from [dockerhub](https://hub.docker.com/), so my next obvious step is to install docker and try running some containers.
 

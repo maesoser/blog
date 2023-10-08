@@ -34,8 +34,6 @@ Baltimore CyberTrust root certificate is available in [Digicert's official webpa
 /certificate/import file-name=digicert-root-ca.pem
 ```
 
-This will solve the problem _right now_ but what if Cloudflare [starts using a new certificate with a different certificate authority?](). [Curl offers a .pem file with all the CA certificates that are bundled in the Mozilla Firefox Browser](https://curl.se/docs/caextract.html) so a long-standing solution would be to load these CA certificates just in case.
-
 This will solve the problem _for now_, but what if Cloudflare decides to [use a new certificate from a different certificate authority](https://developers.cloudflare.com/ssl/reference/migration-guides/digicert-update/)? You can use the [.pem file provided by Curl](https://curl.se/docs/caextract.html), which contains all the CA certificates bundled in Mozilla Firefox Browser. Loading these CA certificates would be a recommended solution for the long term.
 
 ```sh
