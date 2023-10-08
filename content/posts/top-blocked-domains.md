@@ -7,6 +7,8 @@ draft = true
 [taxonomies]
 tags = ["internet", "projects"]
 
++++
+
 In today's digital landscape, the use of DNS filtering has become more important than ever before. Not only does it help to block harmful content and protect users against phishing attempts, but it can also play a significant role in enhancing online privacy.
 
 With the rise of advertising companies and tracking mechanisms, users are constantly exposed to potential threats online. This is where DNS filtering comes into play, allowing users to control what content is accessible on their network and protecting them from unwanted distractions and harmful content.
