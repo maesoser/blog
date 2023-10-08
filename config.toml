@@ -5,7 +5,9 @@ description = "Just a small blog"
 compile_sass = true
 build_search_index = true
 
-taxonomies = [{ name = "tags" }]
+taxonomies = [
+    { name = "tags" }
+]
 
 default_language = "en"
 
@@ -21,8 +23,8 @@ useCDN = true
 favicon = "/icon/favicon.png"
 copyright = "maesoser"
 
-[extra.translations]
-languages = [{name = "en", url = "/"}]
+# [extra.translations]
+# languages = [ {name = "en", url = "/"} ]
 
 [[extra.translations.en]]
 show_more = "Read more ⟶"
@@ -34,7 +36,7 @@ read_time = "minute read"
 all_tags = "All tags"
 menus = [
     { name = "Home", url = "/", weight = 2 },
-#    { name = "All posts", url = "/posts", weight = 2 },
+    { name = "All posts", url = "/posts", weight = 2 },
     { name = "About", url = "/about", weight = 3 },
     { name = "Reading", url = "/reading", weight = 4 },
     { name = "Tags", url = "/tags", weight = 5 },
